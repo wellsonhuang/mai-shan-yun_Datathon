@@ -47,25 +47,8 @@ This project presents an **interactive inventory management dashboard** for a re
 - Visualizes shipment frequency and quantity per ingredient.  
 - Highlights patterns in deliveries and potential delays.
 
----
-
-## Evaluation Alignment
-
-### Creativity & Insight (50%)
-- **Innovative Visualization**: Interactive heat maps, line charts, and ranking tables make insights clear and engaging.  
-- **Smart Analytics**: Trends in ingredient consumption, seasonal patterns, and predictive forecasts are uncovered.  
-- **Actionability**: Dashboard empowers decision-making with reorder alerts, stock status flags, and ingredient forecasting.
-
-### Technical Merit & Utility (50%)
-- **Functionality**: All dashboards pull insights directly from the integrated datasets and respond to user interactions.  
-- **Data Handling**: Data is cleaned, merged, and transformed efficiently to calculate ingredient-level consumption and stock.  
-- **Usability**: Dashboard is intuitive, with clear labeling, filters, and drill-down functionality.  
-- **Performance**: Handles multiple months of data with smooth interactivity and minimal lag.
-
----
-
 ## How to Use
-1. Open the Tableau dashboard file `mai-shan-yun_Datathon.twbx`.  
+1. Open the Tableau dashboard file online.  
 2. Explore **Menu Sales**, **Ingredient Consumption**, and **Stock Status** sheets.  
 3. Click on a menu item to filter ingredient consumption and forecast trends.  
 4. Adjust **Threshold Parameters** for low stock or overstock alerts.  
