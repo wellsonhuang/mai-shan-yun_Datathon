@@ -21,6 +21,16 @@ df_group_all = pd.DataFrame()
 df_category_all = pd.DataFrame()
 df_item_all = pd.DataFrame()
 
+def clean_currency(x):
+    """將 $3,509.64 類型轉為 3509.64 (float)"""
+    if isinstance(x, str):
+        x = x.replace('$', '').replace(',', '').strip()
+        try:
+            return float(x)
+        except ValueError:
+            return None
+    return x
+
 files = [f for f in os.listdir(folder_path) if f.endswith(".xlsx") and "MSY Data" not in f]
 
 for file_name in files:
@@ -43,9 +53,14 @@ for file_name in files:
         print(f"can't read {file_name} {e}")
         continue
 
+
     for df in [df_group, df_category, df_item]:
-        df["Month"] = month_date         
-        df["Month_Label"] = month_name   
+        for col in df.columns:
+            if df[col].astype(str).str.contains(r'\$|,').any():
+                df[col] = df[col].apply(clean_currency)
+
+        df["Month"] = month_date
+        df["Month_Label"] = month_name
 
     df_group_all = pd.concat([df_group_all, df_group], ignore_index=True)
     df_category_all = pd.concat([df_category_all, df_category], ignore_index=True)
