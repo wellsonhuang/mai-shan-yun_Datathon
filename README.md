@@ -19,7 +19,7 @@ This project presents an **interactive inventory management dashboard** for a re
    - Used to calculate total stock received.
 
 ---
-## Datasets Used
+## Data Table Relationships
 
 <img width="741" height="241" alt="截圖 2025-11-09 凌晨4 12 42" src="https://github.com/user-attachments/assets/b4e3250c-7208-4591-b005-f89c35525da3" />
 
